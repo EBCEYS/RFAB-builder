@@ -9,10 +9,10 @@ namespace RFAB_builder.Character
     internal interface IBaseItem
     {
         string Name { get; set; }
-        void Active();
+        void Effect();
         ItemSlot Slot { get; set; }
         string Description { get; set; }
-        void Active(Character character);
+        void Effect(Character character);
     }
 
     public enum ItemSlot

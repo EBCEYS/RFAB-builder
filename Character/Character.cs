@@ -128,7 +128,7 @@ namespace RFAB_builder.Character
             WhiteMana = Race.BaseMP;
             WhiteStamina = Race.BaseST;
             HPRegen = Race.BaseHPRegen;
-            MPRegen = Race.BaseHPRegen;
+            MPRegen = Race.BaseMPRegen;
             STRegen = Race.BaseSTRegen;
             Weight = Race.BaseWeight;
             UnarmedDamage = Race.BaseUnarmedDamage;
@@ -211,15 +211,15 @@ namespace RFAB_builder.Character
             Race.Effect(this);
             foreach (IBaseItem item in Inventory)
             {
-                item.Active(this);
+                item.Effect(this);
             }
             foreach(IBasePerk perk in Perks)
             {
-                perk.Active(this);
+                perk.Effect(this);
             }
             foreach(IBasePassiveEffect effect in Effects)
             {
-                effect.Active(this);
+                effect.Effect(this);
             }
         }
     }

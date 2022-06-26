@@ -10,11 +10,11 @@ namespace RFAB_builder.Character
     {
         string Name { get; set; }
         string Description { get; set; }
-        void Active();
+        void Effect();
         void SetPerksClasses(PerkClass perkClass);
         BasePerkClass BasePerkClass { get; set; }
         PerkClass PerkClass { get; set; }
-        void Active(Character character);
+        void Effect(Character character);
     }
 
     public static class PerkConverter

@@ -12,8 +12,8 @@ namespace RFAB_builder.Character
         string Description { get; set; }
         PassiveEffectType Type { get; set; }
         int PowerLevel { get; set; }
-        void Active();
-        void Active(Character character);
+        void Effect();
+        void Effect(Character character);
     }
 
     public enum PassiveEffectType

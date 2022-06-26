@@ -11,6 +11,6 @@ namespace RFAB_builder.Character
         string Name { get; set; }
         void Effect();
         string Description { get; set; }
-        void Active(Character character);
+        void Effect(Character character);
     }
 }
