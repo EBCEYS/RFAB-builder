@@ -22,12 +22,13 @@ namespace RFAB_builder.Forms
 
         private void CreateCharacterForm_Load(object sender, EventArgs e)
         {
-
+            Logger.Info("Show create character form");
         }
 
         private void CreateCharacterForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             mainMenu.CreateCharacterFormShows = false;
+            Logger.Info("Close create character form");
         }
     }
 }
