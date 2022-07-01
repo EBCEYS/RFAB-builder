@@ -13,6 +13,7 @@ namespace RFAB_builder.Character
         ItemSlot Slot { get; set; }
         string Description { get; set; }
         void Effect(Character character);
+        List<IBaseEnchant> Enchants { get; set; }
     }
 
     public enum ItemSlot

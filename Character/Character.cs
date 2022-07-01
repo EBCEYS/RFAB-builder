@@ -18,9 +18,13 @@ namespace RFAB_builder.Character
         public long BlueStamina { get; set; } = 0;
         public long Level { get; set; } = 0;
         public IBaseRace Race { get; set; } = null;
-        public double HPRegen { get; set; } = 0.0;
-        public double MPRegen { get; set; } = 0.0;
-        public double STRegen { get; set; } = 0.0;
+        public double HPRegenPercents { get; set; } = 0.0;
+        public double MPRegenPercents { get; set; } = 0.0;
+        public double STRegenPercents { get; set; } = 0.0;
+        public double HPRegenDigit { get; set; } = 0.0;
+        public double HPRegenMultiplyer { get; set; } = 0.0;
+        public double MPRegenDigit { get; set; } = 0.0;
+        public double STRegenDigit { get; set; } = 0.0;
 
         public double Trade { get; set; } = 0.0;
         public double Weight { get; set; } = 0.0;
@@ -52,6 +56,7 @@ namespace RFAB_builder.Character
         public double AttackSpeed { get; set; } = 0.0;
         public double MovementSpeed { get; set; } = 1.0;
         public double ShoutsCooldownRecovery { get; set; } = 1.5;
+        public double ReduceCostOfPowerAttacks { get; set; } = 1.0;
 
         #endregion
 
@@ -113,6 +118,28 @@ namespace RFAB_builder.Character
         public double DestrCost { get; set; } = 1.0;
         public double RestoreCost { get; set; } = 1.0;
         public double AlterationCost { get; set; } = 1.0;
+        public double MageCostReduceCup { get; set; } = 0.6;
+        #endregion
+
+        #region SkillLevels
+        public long Smithing { get; set; } = 5;
+        public long HeavyArmour {get;set; } = 5;
+        public long Block {get;set; } = 5;
+        public long TwoHandedWeapon {get;set; } = 5;
+        public long OneHandedWeapon {get;set; } = 5;
+        public long Archery {get;set; } = 5;
+        public long Evasion {get;set; } = 5;
+        public long Sneak {get;set; } = 5;
+        public long Speech {get;set; } = 5;
+        public long UnarmedFight {get;set; } = 5;
+        public long ArtOfTheRogue {get;set; } = 5;
+        public long Alchemy {get;set; } = 5;
+        public long Illusion {get;set; } = 5;
+        public long Conjuration {get;set; } = 5;
+        public long Destruction {get;set; } = 5;
+        public long Restoration {get;set; } = 5;
+        public long Alteration { get; set; } = 5;
+        public long Enchanting { get; set; } = 5;
         #endregion
 
         public void SetDefaultStats()
@@ -127,9 +154,9 @@ namespace RFAB_builder.Character
             WhiteHP = Race.BaseHP;
             WhiteMana = Race.BaseMP;
             WhiteStamina = Race.BaseST;
-            HPRegen = Race.BaseHPRegen;
-            MPRegen = Race.BaseMPRegen;
-            STRegen = Race.BaseSTRegen;
+            HPRegenPercents = Race.BaseHPRegen;
+            MPRegenPercents = Race.BaseMPRegen;
+            STRegenPercents = Race.BaseSTRegen;
             Weight = Race.BaseWeight;
             UnarmedDamage = Race.BaseUnarmedDamage;
 

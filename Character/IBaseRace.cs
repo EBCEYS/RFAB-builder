@@ -16,9 +16,9 @@ namespace RFAB_builder.Character
         long BaseMP { get; set; }
         long BaseST { get; set; }
 
-        long BaseHPRegen { get; set; }
-        long BaseMPRegen { get; set; }
-        long BaseSTRegen { get; set; }
+        double BaseHPRegen { get; set; }
+        double BaseMPRegen { get; set; }
+        double BaseSTRegen { get; set; }
 
         long BaseUnarmedDamage { get; set; }
         long BaseWeight { get; set; }

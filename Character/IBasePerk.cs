@@ -36,7 +36,7 @@ namespace RFAB_builder.Character
                 case PerkClass.ArtOfTheRogue: return "Искусство мошенника";
                 case PerkClass.Alchemy: return "Алхимия";
                 case PerkClass.Illusion: return "Иллюзия";
-                case PerkClass.Сonjuration: return "Колдовство";
+                case PerkClass.Conjuration: return "Колдовство";
                 case PerkClass.Destruction: return "Разрушение";
                 case PerkClass.Restoration: return "Восстановление";
                 case PerkClass.Alteration: return "Изменеие";
@@ -61,7 +61,7 @@ namespace RFAB_builder.Character
                 case PerkClass.ArtOfTheRogue: return BasePerkClass.Rogue;
                 case PerkClass.Alchemy: return BasePerkClass.Rogue;
                 case PerkClass.Illusion: return BasePerkClass.Mage;
-                case PerkClass.Сonjuration: return BasePerkClass.Mage;
+                case PerkClass.Conjuration: return BasePerkClass.Mage;
                 case PerkClass.Destruction: return BasePerkClass.Mage;
                 case PerkClass.Restoration: return BasePerkClass.Mage;
                 case PerkClass.Alteration: return BasePerkClass.Mage;
@@ -91,7 +91,7 @@ namespace RFAB_builder.Character
         #endregion
         #region Mage
         Illusion,
-        Сonjuration,
+        Conjuration,
         Destruction,
         Restoration,
         Alteration,

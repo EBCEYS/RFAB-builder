@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +12,10 @@ namespace RFAB_builder.Character
         string Name { get; set; }
         string Description { get; set; }
         PassiveEffectType Type { get; set; }
-        int PowerLevel { get; set; }
+        int? PowerLevel { get; set; }
         void Effect();
         void Effect(Character character);
+        Color Color { get; set; }
     }
 
     public enum PassiveEffectType

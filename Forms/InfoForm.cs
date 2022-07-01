@@ -33,7 +33,7 @@ namespace RFAB_builder.Forms
             this.BackgroundImage = Properties.Resources.MainMenuBackgroundImage;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             groupBox1.ForeColor = Color.Black;
-            InfoLabel.Text =  $@"RFABulder программа для легкого и удобного создания{Environment.NewLine}своих билдов в Requiem For A Balance {Program.GameVersion}.{Environment.NewLine}Автор: EBCEY.{Environment.NewLine}О возникших ошибках и пожеланиях можно написать мне в дискорд.{Environment.NewLine}При ошибках отправляйте логи{Environment.NewLine}{Logger.Path}";
+            textBox1.Text =  $@"RFABulder программа для легкого и удобного создания{Environment.NewLine}своих билдов в Requiem For A Balance {Program.GameVersion}.{Environment.NewLine}Автор: EBCEY.{Environment.NewLine}О возникших ошибках и пожеланиях можно написать мне в дискорд.{Environment.NewLine}При ошибках отправляйте логи{Environment.NewLine}{Logger.Path}";
         }
 
         private void InfoForm_FormClosed(object sender, FormClosedEventArgs e)

@@ -49,12 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Character\IBaseEnchant.cs" />
     <Compile Include="Character\IBaseItem.cs" />
     <Compile Include="Character\IBasePassiveEffect.cs" />
     <Compile Include="Character\IBasePerk.cs" />
     <Compile Include="Character\Character.cs" />
     <Compile Include="Character\IBaseRace.cs" />
     <Compile Include="Character\IBaseStone.cs" />
+    <Compile Include="Character\Races\Altmer.cs" />
+    <Compile Include="Character\Races\Argonianin.cs" />
+    <Compile Include="Character\Races\Bosmer.cs" />
+    <Compile Include="Character\Races\Bretonec.cs" />
+    <Compile Include="Character\Races\Danmer.cs" />
+    <Compile Include="Character\Races\Imperec.cs" />
+    <Compile Include="Character\Races\Kadjit.cs" />
+    <Compile Include="Character\Races\Nord.cs" />
+    <Compile Include="Character\Races\Ork.cs" />
+    <Compile Include="Character\Races\Redgard.cs" />
+    <Compile Include="Character\Storage.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Character\Effects\" />
     <Folder Include="Character\Items\" />
     <Folder Include="Character\Perks\" />
   </ItemGroup>
