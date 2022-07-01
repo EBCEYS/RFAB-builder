@@ -18,13 +18,14 @@ namespace RFAB_builder.Character.Races
         public double BaseSTRegen { get; set; } = 0.015;
         public long BaseUnarmedDamage { get; set; } = 7;
         public long BaseWeight { get; set; } = 100;
+        public RacesTypes RaceType { get; set; } = RacesTypes.Bretonec;
 
         public void Effect()
         {
             throw new NotImplementedException();
         }
 
-        public void Effect(Character character)
+        public void Effect(Characters character)
         {
             character.WhiteHP += BaseHP;
             character.WhiteMana += BaseMP;

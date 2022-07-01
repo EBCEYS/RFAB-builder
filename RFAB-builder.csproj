@@ -66,12 +66,37 @@
     <Compile Include="Character\Races\Nord.cs" />
     <Compile Include="Character\Races\Ork.cs" />
     <Compile Include="Character\Races\Redgard.cs" />
+    <Compile Include="Character\Stones\AtronahStone.cs" />
+    <Compile Include="Character\Stones\HorseStone.cs" />
+    <Compile Include="Character\Stones\LedyStone.cs" />
+    <Compile Include="Character\Stones\LordeStone.cs" />
+    <Compile Include="Character\Stones\LoverStone.cs" />
+    <Compile Include="Character\Stones\MageStone.cs" />
+    <Compile Include="Character\Stones\RitualStone.cs" />
+    <Compile Include="Character\Stones\ShadowStone.cs" />
+    <Compile Include="Character\Stones\ShcolarStone.cs" />
+    <Compile Include="Character\Stones\SnakeStone.cs" />
+    <Compile Include="Character\Stones\ThiefStone.cs" />
+    <Compile Include="Character\Stones\TowerStone.cs" />
+    <Compile Include="Character\Stones\WarriorStone.cs" />
     <Compile Include="Character\Storage.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\ChooseRaceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\ChooseRaceForm.Designer.cs">
+      <DependentUpon>ChooseRaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChooseStoneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChooseStoneForm.Designer.cs">
+      <DependentUpon>ChooseStoneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CreateCharacterForm.cs">
       <SubType>Form</SubType>
@@ -88,8 +113,14 @@
     <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ChooseRaceForm.resx">
+      <DependentUpon>ChooseRaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChooseStoneForm.resx">
+      <DependentUpon>ChooseStoneForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateCharacterForm.resx">
       <DependentUpon>CreateCharacterForm.cs</DependentUpon>

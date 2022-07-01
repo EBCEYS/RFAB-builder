@@ -46,6 +46,7 @@ namespace RFAB_builder
                 CreateCharacterFormShows = true;
                 CreateCharacterForm createCharacterForm = new CreateCharacterForm(this);
                 createCharacterForm.Show();
+                createCharacterForm.ВыборРасыToolStripMenuItem_Click(sender, e);
             }
         }
     }

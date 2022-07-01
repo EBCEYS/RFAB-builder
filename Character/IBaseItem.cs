@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace RFAB_builder.Character
 {
-    internal interface IBaseItem
+    public interface IBaseItem
     {
         string Name { get; set; }
         void Effect();
         ItemSlot Slot { get; set; }
         string Description { get; set; }
-        void Effect(Character character);
+        void Effect(Characters character);
         List<IBaseEnchant> Enchants { get; set; }
     }
 

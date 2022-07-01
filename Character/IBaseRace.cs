@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace RFAB_builder.Character
 {
-    internal interface IBaseRace
+    public interface IBaseRace
     {
         string Name { get; set; }
         void Effect();
         string Description { get; set; }
-        void Effect(Character character);
+        void Effect(Characters character);
         long BaseHP { get; set; }
         long BaseMP { get; set; }
         long BaseST { get; set; }
@@ -22,5 +22,21 @@ namespace RFAB_builder.Character
 
         long BaseUnarmedDamage { get; set; }
         long BaseWeight { get; set; }
+
+        RacesTypes RaceType { get; set; }
+    }
+
+    public enum RacesTypes
+    {
+        Ork,
+        Nord,
+        Redgard,
+        Kadjit,
+        Bosmer,
+        Altmer,
+        Bretonec,
+        Danmer,
+        Imperec,
+        Argonianin
     }
 }

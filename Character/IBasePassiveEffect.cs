@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace RFAB_builder.Character
 {
-    internal interface IBasePassiveEffect
+    public interface IBasePassiveEffect
     {
         string Name { get; set; }
         string Description { get; set; }
         PassiveEffectType Type { get; set; }
         int? PowerLevel { get; set; }
         void Effect();
-        void Effect(Character character);
+        void Effect(Characters character);
         Color Color { get; set; }
     }
 

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace RFAB_builder.Character
 {
-    internal interface IBaseStone
+    public interface IBaseStone
     {
         string Name { get; set; }
         void Effect();
         string Description { get; set; }
-        void Effect(Character character);
+        void Effect(Characters character);
     }
 }

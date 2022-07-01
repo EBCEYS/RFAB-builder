@@ -18,13 +18,14 @@ namespace RFAB_builder.Character.Races
         public double BaseSTRegen { get; set; } = 0.0165;
         public long BaseUnarmedDamage { get; set; } = 45;
         public long BaseWeight { get; set; } = 110;
+        public RacesTypes RaceType { get; set; } = RacesTypes.Kadjit;
 
         public void Effect()
         {
             throw new NotImplementedException();
         }
 
-        public void Effect(Character character)
+        public void Effect(Characters character)
         {
             character.WhiteHP += BaseHP;
             character.WhiteMana += BaseMP;

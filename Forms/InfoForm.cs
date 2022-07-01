@@ -47,7 +47,7 @@ namespace RFAB_builder.Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLabel1.LinkVisited = true;
             System.Diagnostics.Process.Start("https://discord.gg/4yqdafW");
@@ -57,7 +57,7 @@ namespace RFAB_builder.Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLabel1.LinkVisited = true;
             System.Diagnostics.Process.Start("https://skyrimrequiem.ru");
@@ -67,7 +67,7 @@ namespace RFAB_builder.Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLabel1.LinkVisited = true;
             MessageBox.Show("nolimit_Evsey#3704", "Discord");

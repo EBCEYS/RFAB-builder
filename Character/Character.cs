@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RFAB_builder.Character
 {
-    internal class Character
+    public class Characters
     {
         #region BaseStats
         public string Name { get; set; }
@@ -42,8 +42,11 @@ namespace RFAB_builder.Character
         public long PoisonNumber { get; set; } = 1;
 
         public double OneHandedDamage { get; set; } = 0.0;
+        public double OneHandedDamageMultiplier { get; set; } = 0.0;
         public double TwoHandedDamage { get; set; } = 0.0;
+        public double TwoHandedDamageMultiplier { get; set; } = 0.0;
         public double ArcheryDamage { get; set; } = 0.0;
+        public double ArcheryDamageMultiplier { get; set; } = 0.0;
         public long UnarmedDamage { get; set; } = 0;
         public double BeastsDamage { get; set; } = 0.0;
         public double DragonsDamage { get; set; } = 0.0;
@@ -58,12 +61,16 @@ namespace RFAB_builder.Character
         public double ShoutsCooldownRecovery { get; set; } = 1.5;
         public double ReduceCostOfPowerAttacks { get; set; } = 1.0;
 
+        public long SummonedUnitsNumber { get; set; } = 1;
+
         #endregion
 
         #region DefStats
+        public double ShoutsDamageReduction { get; set; } = 0.0;
         public long ArmourClass { get; set; } = 0;
-
-        public double DefPercent { get; set; } = 0.0;
+        public double ArmourClassMultiplier { get; set; } = 1;
+        public double PhysicalDamageReduction { get; set; } = 0.0;
+        public double RangeDamageReduction { get; set; } = 0.0;
         public double MageResistance { get; set; } = 0.0;
         public double FireResistance { get; set; } = 0.0;
         public double ColdResistance { get; set; } = 0.0;
@@ -99,6 +106,7 @@ namespace RFAB_builder.Character
 
         public List<IBasePerk> Perks { get; set; } = new List<IBasePerk>();
         public List<IBasePassiveEffect> Effects { get; set; } = new List<IBasePassiveEffect>();
+        public IBaseStone Stone { get; set; }
 
         #region Inventory
         public IBaseItem Head { get; set; } = null;
@@ -170,18 +178,24 @@ namespace RFAB_builder.Character
             BeastsDamage = 0.0;
             DragonsDamage = 0.0;
             UndeadDamage = 0.0;
+            SummonedUnitsNumber = 1;
 
             OneHandedMastery = 0;
             TwoHandedMastery = 0;
             ArcheryMastery = 0;
+
+            OneHandedDamageMultiplier = 0.0;
+            TwoHandedDamageMultiplier = 0.0;
+            ArcheryDamageMultiplier = 0.0;
 
             AttackSpeed = 0.0;
             MovementSpeed = 1.0;
             ShoutsCooldownRecovery = 1.5;
 
             ArmourClass = 0;
-
-            DefPercent = 0.0;
+            RangeDamageReduction = 0.0;
+            ArmourClassMultiplier = 1.0;
+            PhysicalDamageReduction = 0.0;
             MageResistance = 0.0;
             FireResistance = 0.0;
             ColdResistance = 0.0;
@@ -193,6 +207,7 @@ namespace RFAB_builder.Character
             DragonResistance = 0.0;
             UndeadResistance = 0.0;
             ChanceToAbsorbSpell = 0.0;
+            ShoutsDamageReduction = 0.0;
 
             Stability = 0.0;
             FallDamage = 1.0;
@@ -219,12 +234,25 @@ namespace RFAB_builder.Character
             AlterationCost = 1.0;
         }
 
+        #region StatsIncreases
+        public long HPIncreases { get; set; } = 0;
+        public long STIncreases { get; set; } = 0;
+        public long MPIncreases { get; set; } = 0;
+        #endregion
+
         public long CalcLevel()
         {
-            return Perks.Count - 3;
+            return HPIncreases + STIncreases + MPIncreases;
         }
 
-        public Character(IBaseRace race, string name)
+        public void StatIncreasesEffect()
+        {
+            WhiteHP = HPIncreases * 5;
+            WhiteStamina = STIncreases * 5;
+            WhiteMana = MPIncreases * 5;
+        }
+
+        public Characters(IBaseRace race, string name)
         {
             Logger.Info($"Set character with name: {name} with race:");
             Logger.Info(race);
@@ -235,6 +263,7 @@ namespace RFAB_builder.Character
         public void Effect()
         {
             SetDefaultStats();
+            StatIncreasesEffect();
             Race.Effect(this);
             foreach (IBaseItem item in Inventory)
             {
@@ -248,6 +277,7 @@ namespace RFAB_builder.Character
             {
                 effect.Effect(this);
             }
+            Stone.Effect(this);
         }
     }
 }

@@ -18,13 +18,14 @@ namespace RFAB_builder.Character.Races
         public double BaseSTRegen { get; set; } = 0.016;
         public long BaseUnarmedDamage { get; set; } = 8;
         public long BaseWeight { get; set; } = 120;
+        public RacesTypes RaceType { get; set; } = RacesTypes.Danmer;
 
         public void Effect()
         {
             throw new NotImplementedException();
         }
 
-        public void Effect(Character character)
+        public void Effect(Characters character)
         {
             character.WhiteHP += BaseHP;
             character.WhiteMana += BaseMP;

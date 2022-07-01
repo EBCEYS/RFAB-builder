@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RFAB_builder.Character
 {
-    internal interface IBasePerk
+    public interface IBasePerk
     {
         string Name { get; set; }
         string Description { get; set; }
@@ -14,7 +14,7 @@ namespace RFAB_builder.Character
         void SetPerksClasses(PerkClass perkClass);
         BasePerkClass BasePerkClass { get; set; }
         PerkClass PerkClass { get; set; }
-        void Effect(Character character);
+        void Effect(Characters character);
     }
 
     public static class PerkConverter
