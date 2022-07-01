@@ -18,7 +18,7 @@ namespace RFAB_builder.Character.Stones
 
         public void Effect(Characters character)
         {
-            character.WhiteMana += 300;
+            character.BlueMana += 300;
             character.ChanceToAbsorbSpell += 0.5;
             character.AbsorbCup = 0.9;
             character.MPRegenPercents = 0.0;

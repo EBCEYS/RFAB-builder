@@ -18,7 +18,7 @@ namespace RFAB_builder.Character.Stones
 
         public void Effect(Characters character)
         {
-            character.WhiteHP += 50;
+            character.BlueHP += 50;
             character.HPRangTwo = true;
             character.HPRegenPercents += 1.0;
             character.PhysicalDamageReduction += 0.1;

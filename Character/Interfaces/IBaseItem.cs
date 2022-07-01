@@ -12,8 +12,18 @@ namespace RFAB_builder.Character
         void Effect();
         ItemSlot Slot { get; set; }
         string Description { get; set; }
+        ItemType ItemType { get; set; }
         void Effect(Characters character);
         List<IBaseEnchant> Enchants { get; set; }
+        /// <summary>
+        /// Base = 1.0;
+        /// </summary>
+        double ClassMultiplier { get; set; }
+    }
+
+    public enum ItemType
+    {
+        dvemerik
     }
 
     public enum ItemSlot

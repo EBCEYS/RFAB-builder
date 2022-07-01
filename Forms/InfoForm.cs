@@ -73,7 +73,7 @@ namespace RFAB_builder.Forms
             MessageBox.Show("nolimit_Evsey#3704", "Discord");
         }
 
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLabel4.LinkVisited = true;
             System.Diagnostics.Process.Start("https://docs.google.com/spreadsheets/d/1euxZqX4B2wIpdgbz_dKMrQWV8LB-btwnjCCyfN0KeI0/edit#gid=828854264");

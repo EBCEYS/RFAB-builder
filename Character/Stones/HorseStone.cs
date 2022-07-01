@@ -18,7 +18,7 @@ namespace RFAB_builder.Character.Stones
 
         public void Effect(Characters character)
         {
-            character.WhiteStamina += 50;
+            character.BlueStamina += 50;
             character.STRangTwo = true;
             character.MovementSpeed += 0.15;
             character.Weight += 100;

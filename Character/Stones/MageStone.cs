@@ -18,7 +18,7 @@ namespace RFAB_builder.Character.Stones
 
         public void Effect(Characters character)
         {
-            character.WhiteMana += 50;
+            character.BlueMana += 50;
             character.MPRangTwo = true;
             character.Destruction += 20;
             character.Illusion += 20;

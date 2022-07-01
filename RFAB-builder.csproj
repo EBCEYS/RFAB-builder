@@ -49,13 +49,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Character\IBaseEnchant.cs" />
-    <Compile Include="Character\IBaseItem.cs" />
-    <Compile Include="Character\IBasePassiveEffect.cs" />
-    <Compile Include="Character\IBasePerk.cs" />
+    <Compile Include="Character\Effects\AllmakerStonesEffects\BeastStoneEffect.cs" />
+    <Compile Include="Character\Effects\AllmakerStonesEffects\SunStoneEffect.cs" />
+    <Compile Include="Character\Effects\AllmakerStonesEffects\TreeStoneEffect.cs" />
+    <Compile Include="Character\Effects\AllmakerStonesEffects\WaterStoneEffect.cs" />
+    <Compile Include="Character\Effects\AllmakerStonesEffects\WindStoneEffect.cs" />
+    <Compile Include="Character\Effects\BlackBooksEffects\BardsKnowledgeEffect.cs" />
+    <Compile Include="Character\Effects\BlackBooksEffects\CompanionsIntuitionEffect.cs" />
+    <Compile Include="Character\Effects\BlackBooksEffects\LoverIntuitionEffect.cs" />
+    <Compile Include="Character\Effects\BlackBooksEffects\ScientistsIntuitionEffect.cs" />
+    <Compile Include="Character\Effects\BlackBooksEffects\SeakerOfMagicEffect.cs" />
+    <Compile Include="Character\Effects\BlackBooksEffects\SeakerOfPowerEffect.cs" />
+    <Compile Include="Character\Effects\BlackBooksEffects\SeakerOfShadowsEffect.cs" />
+    <Compile Include="Character\Effects\BlessingOfNatureEffects\ZealotKynarethEffect.cs" />
+    <Compile Include="Character\Effects\CivilWar\HeraldOfTheStormEffect.cs" />
+    <Compile Include="Character\Effects\CivilWar\LegateEffect.cs" />
+    <Compile Include="Character\Effects\AllmakerStonesEffects\EarthStoneEffect.cs" />
+    <Compile Include="Character\Effects\GuildsEffects\ArchmageEffect.cs" />
+    <Compile Include="Character\Effects\GuildsEffects\HarbingerEffect.cs" />
+    <Compile Include="Character\Effects\GuildsEffects\HearingOneEffect.cs" />
+    <Compile Include="Character\Effects\GuildsEffects\SecretAgentEffect.cs" />
+    <Compile Include="Character\Effects\GuildsEffects\TheGiftOfTalkativenessEffect.cs" />
+    <Compile Include="Character\Effects\GuildsEffects\ThiefMasterEffect.cs" />
+    <Compile Include="Character\Effects\MainQuestEffects\AlduinsDoomEffect.cs" />
+    <Compile Include="Character\Effects\MainQuestEffects\KnightOfTheDawnEffect.cs" />
+    <Compile Include="Character\Effects\MainQuestEffects\LordOfClanVolkiharEffect.cs" />
+    <Compile Include="Character\Effects\MainQuestEffects\TrueDragonbornEffect.cs" />
+    <Compile Include="Character\Effects\BlessingOfNatureEffects\ServantOfKynarethEffect.cs" />
+    <Compile Include="Character\Effects\OtherEffects\AlikhrsDisciplineEffect.cs" />
+    <Compile Include="Character\Effects\OtherEffects\ArenaLegendEffect.cs" />
+    <Compile Include="Character\Effects\OtherEffects\DebellaChosenEffect.cs" />
+    <Compile Include="Character\Effects\OtherEffects\ElderKnowledgesEffect.cs" />
+    <Compile Include="Character\Effects\OtherEffects\EsbernPotionEffect.cs" />
+    <Compile Include="Character\Effects\OtherEffects\SkyesEyeEffect.cs" />
+    <Compile Include="Character\Effects\OtherEffects\KarghstagSpiritEffect.cs" />
+    <Compile Include="Character\Effects\OtherEffects\MaraChosenEffect.cs" />
+    <Compile Include="Character\Effects\OtherEffects\OgmaInfinumEffect.cs" />
+    <Compile Include="Character\Interfaces\IBaseEnchant.cs" />
+    <Compile Include="Character\Interfaces\IBaseItem.cs" />
+    <Compile Include="Character\Interfaces\IBasePassiveEffect.cs" />
+    <Compile Include="Character\Interfaces\IBasePerk.cs" />
     <Compile Include="Character\Character.cs" />
-    <Compile Include="Character\IBaseRace.cs" />
-    <Compile Include="Character\IBaseStone.cs" />
+    <Compile Include="Character\Interfaces\IBaseRace.cs" />
+    <Compile Include="Character\Interfaces\IBaseStone.cs" />
     <Compile Include="Character\Races\Altmer.cs" />
     <Compile Include="Character\Races\Argonianin.cs" />
     <Compile Include="Character\Races\Bosmer.cs" />
@@ -153,7 +189,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Character\Effects\" />
     <Folder Include="Character\Items\" />
     <Folder Include="Character\Perks\" />
   </ItemGroup>

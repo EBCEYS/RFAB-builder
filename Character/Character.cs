@@ -33,6 +33,10 @@ namespace RFAB_builder.Character
         /// Праведность.
         /// </summary>
         public bool IsGood { get; set; } = true;
+        /// <summary>
+        /// В режиме стелса.
+        /// </summary>
+        public bool IsInStealth { get; set; } = false;
         #endregion
 
         #region OffenceStats
@@ -40,6 +44,7 @@ namespace RFAB_builder.Character
         public double PoisonMagePower { get; set; } = 0.0;
         public double PoisonPowerAndDuration { get; set; } = 0.0;
         public long PoisonNumber { get; set; } = 1;
+        public double WeaponDamageMultiplier { get; set; } = 0.0;
 
         public double OneHandedDamage { get; set; } = 0.0;
         public double OneHandedDamageMultiplier { get; set; } = 0.0;
@@ -63,6 +68,9 @@ namespace RFAB_builder.Character
 
         public long SummonedUnitsNumber { get; set; } = 1;
 
+        public double ShoutsEffect { get; set; } = 1.0;
+        public double ShoutsDamageMultiplier { get; set; } = 1.0;
+
         #endregion
 
         #region DefStats
@@ -83,6 +91,8 @@ namespace RFAB_builder.Character
         public double UndeadResistance { get; set; } = 0.0;
         public double ChanceToAbsorbSpell { get; set; } = 0.0;
 
+        public double ElemResistanceOverCup { get; set; } = 0.0;
+
         public double Stability { get; set; } = 0.0;
         public double FallDamage { get; set; } = 1.0;
 
@@ -97,6 +107,8 @@ namespace RFAB_builder.Character
         public double MageResistanceCup { get; set; } = 0.7;
         public double ElemResistanceCup { get; set; } = 0.7;
         public double AbsorbCup { get; set; } = 0.7;
+
+        public long AdditionalSummonMinionsHealth { get; set; } = 0;
         #endregion
 
         #region Stealth
@@ -104,6 +116,7 @@ namespace RFAB_builder.Character
         public double SneakMastery { get; set; } = 0.0;
         #endregion
 
+        public long MaxPerksCount { get; set; } = 0;
         public List<IBasePerk> Perks { get; set; } = new List<IBasePerk>();
         public List<IBasePassiveEffect> Effects { get; set; } = new List<IBasePassiveEffect>();
         public IBaseStone Stone { get; set; }
@@ -167,6 +180,9 @@ namespace RFAB_builder.Character
             STRegenPercents = Race.BaseSTRegen;
             Weight = Race.BaseWeight;
             UnarmedDamage = Race.BaseUnarmedDamage;
+            WeaponDamageMultiplier = 0.0;
+
+            MaxPerksCount = Level + 3;
 
             MagePower = 0.0;
             PoisonMagePower = 0.0;
@@ -179,6 +195,8 @@ namespace RFAB_builder.Character
             DragonsDamage = 0.0;
             UndeadDamage = 0.0;
             SummonedUnitsNumber = 1;
+            ShoutsEffect = 1.0;
+            ShoutsDamageMultiplier = 1.0;
 
             OneHandedMastery = 0;
             TwoHandedMastery = 0;
@@ -208,6 +226,8 @@ namespace RFAB_builder.Character
             UndeadResistance = 0.0;
             ChanceToAbsorbSpell = 0.0;
             ShoutsDamageReduction = 0.0;
+            ElemResistanceOverCup = 0.0;
+            AdditionalSummonMinionsHealth = 0;
 
             Stability = 0.0;
             FallDamage = 1.0;
