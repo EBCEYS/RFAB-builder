@@ -33,7 +33,7 @@ namespace RFAB_builder.Forms
             this.BackgroundImage = Properties.Resources.MainMenuBackgroundImage;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             groupBox1.ForeColor = Color.Black;
-            textBox1.Text =  $@"RFABulder программа для легкого и удобного создания{Environment.NewLine}своих билдов в Requiem For A Balance {Program.GameVersion}.{Environment.NewLine}Автор: EBCEY.{Environment.NewLine}О возникших ошибках и пожеланиях можно написать мне в дискорд.{Environment.NewLine}При ошибках отправляйте логи{Environment.NewLine}{Logger.Path}";
+            textBox1.Text =  $@"RFABulder программа для легкого и удобного создания{Environment.NewLine}своих билдов в Requiem For A Balance {Program.GameVersion}.{Environment.NewLine}Спасибо Sw1ft за RFABuilder в google docs.{Environment.NewLine}Автор: EBCEY.{Environment.NewLine}О возникших ошибках и пожеланиях можно написать мне в дискорд.{Environment.NewLine}При ошибках отправляйте логи{Environment.NewLine}{Logger.Path}";
         }
 
         private void InfoForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -59,7 +59,7 @@ namespace RFAB_builder.Forms
         /// <param name="e"></param>
         private void LinkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            linkLabel1.LinkVisited = true;
+            linkLabel2.LinkVisited = true;
             System.Diagnostics.Process.Start("https://skyrimrequiem.ru");
         }
         /// <summary>
@@ -69,8 +69,14 @@ namespace RFAB_builder.Forms
         /// <param name="e"></param>
         private void LinkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            linkLabel1.LinkVisited = true;
+            linkLabel3.LinkVisited = true;
             MessageBox.Show("nolimit_Evsey#3704", "Discord");
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel4.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://docs.google.com/spreadsheets/d/1euxZqX4B2wIpdgbz_dKMrQWV8LB-btwnjCCyfN0KeI0/edit#gid=828854264");
         }
     }
 }
