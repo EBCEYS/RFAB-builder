@@ -11,9 +11,9 @@ namespace RFAB_builder.Character.Effects
     {
         public string Name { get; set; } = "Тайный агент";
         public string Description { get; set; } = "30% шанс избежать 10% получаемого урона [любого]. 10% сопротивления ядам.";
-        public PassiveEffectType Type { get; set; }
-        public int? PowerLevel { get; set; }
-        public Color Color { get; set; }
+        public PassiveEffectType Type { get; set; } = PassiveEffectType.Guilds;
+        public int? PowerLevel { get; set; } = 1;
+        public Color Color { get; set; } = Color.Red;
 
         public void Effect()
         {

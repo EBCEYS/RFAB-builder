@@ -71,6 +71,9 @@ namespace RFAB_builder.Character
         public double ShoutsEffect { get; set; } = 1.0;
         public double ShoutsDamageMultiplier { get; set; } = 1.0;
 
+        public double SneakAttackMultiplierMelee { get; set; } = 3.0;
+        public double SneakAttackMultiplierRange { get; set; } = 1.5;
+
         #endregion
 
         #region DefStats
@@ -116,10 +119,11 @@ namespace RFAB_builder.Character
         public double SneakMastery { get; set; } = 0.0;
         #endregion
 
-        public long MaxPerksCount { get; set; } = 0;
+        public long MaxPerksCount { get; set; } = 3;
         public List<IBasePerk> Perks { get; set; } = new List<IBasePerk>();
         public List<IBasePassiveEffect> Effects { get; set; } = new List<IBasePassiveEffect>();
         public IBaseStone Stone { get; set; }
+        public IBasePassiveEffect God { get; set; } = null;
 
         #region Inventory
         public IBaseItem Head { get; set; } = null;
@@ -197,6 +201,9 @@ namespace RFAB_builder.Character
             SummonedUnitsNumber = 1;
             ShoutsEffect = 1.0;
             ShoutsDamageMultiplier = 1.0;
+
+            SneakAttackMultiplierMelee = 3.0;
+            SneakAttackMultiplierRange = 1.5;
 
             OneHandedMastery = 0;
             TwoHandedMastery = 0;

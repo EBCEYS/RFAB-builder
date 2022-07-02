@@ -40,15 +40,12 @@ namespace RFAB_builder.Character
         {
             new LegateEffect(), new HeraldOfTheStormEffect()
         };
-        public static List<IBasePassiveEffect> BlackBooksIllRegentEffects { get; set; } = new List<IBasePassiveEffect>()
+        public static List<IBasePassiveEffect> BlackBooksEffects { get; set; } = new List<IBasePassiveEffect>()
         {
             new SeakerOfPowerEffect(), new SeakerOfMagicEffect(), new SeakerOfShadowsEffect()
+            , new ScientistsIntuitionEffect(), new LoverIntuitionEffect(), new CompanionsIntuitionEffect()
+            , new BardsKnowledgeEffect()
         };
-        public static List<IBasePassiveEffect> BlackBooksWindsOfChangeEffects { get; set; } = new List<IBasePassiveEffect>()
-        {
-            new ScientistsIntuitionEffect(), new LoverIntuitionEffect(), new CompanionsIntuitionEffect()
-        };
-        public static IBasePassiveEffect UntelledLegendsEffects { get; set; } = new BardsKnowledgeEffect();
         public static List<IBasePassiveEffect> AllMakerStonesEffects { get; set; } = new List<IBasePassiveEffect>()
         {
             new EarthStoneEffect(), new TreeStoneEffect(), new BeastStoneEffect()
@@ -59,6 +56,20 @@ namespace RFAB_builder.Character
             new OgmaInfinumEffect(), new ElderKnowledgesEffect(), new SkyesEyeEffect(), new KarghstagSpiritEffect()
             , new AlikhrsDisciplineEffect(), new ArenaLegendEffect(), new EsbernPotionEffect(), new DebellaChosenEffect()
             , new MaraChosenEffect()
+        };
+        public static List<IBasePassiveEffect> GoodGodsEffects { get; set; } = new List<IBasePassiveEffect>()
+        {
+            new AkatowEffect(), new ZenitarEffect(), new DjulianosEffect(), new DibellaEffect()
+            , new KinaretEffect(), new MaraEffect(), new ArkeyEffect(), new StendarEffect()
+            , new TalosEffect(), new AurielEffect()
+        };
+        public static List<IBasePassiveEffect> BadGodsEffects { get; set; } = new List<IBasePassiveEffect>()
+        {
+            new BoetiaEffect(), new NokturnalEffect(), new MefalaEffect()
+        };
+        public static List<IBasePassiveEffect> NeutralGodsEffects { get; set; } = new List<IBasePassiveEffect>()
+        {
+            new PeriaitEffect(), new SangvinEffect(), new MalakatEffect(), new AzuraEffect()
         };
     }
 }

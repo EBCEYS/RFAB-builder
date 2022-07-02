@@ -65,6 +65,23 @@
     <Compile Include="Character\Effects\CivilWar\HeraldOfTheStormEffect.cs" />
     <Compile Include="Character\Effects\CivilWar\LegateEffect.cs" />
     <Compile Include="Character\Effects\AllmakerStonesEffects\EarthStoneEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\AkatowEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\ArkeyEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\AurielEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\BadGods\BoetiaEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\BadGods\MefalaEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\BadGods\NokturnalEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\DibellaEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\DjulianosEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\KinaretEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\MaraEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\NeutralGods\AzuraEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\NeutralGods\MalakatEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\NeutralGods\PeriaitEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\NeutralGods\SangvinEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\StendarEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\TalosEffect.cs" />
+    <Compile Include="Character\Effects\GodsBlessingEffects\ZenitarEffect.cs" />
     <Compile Include="Character\Effects\GuildsEffects\ArchmageEffect.cs" />
     <Compile Include="Character\Effects\GuildsEffects\HarbingerEffect.cs" />
     <Compile Include="Character\Effects\GuildsEffects\HearingOneEffect.cs" />
@@ -116,6 +133,13 @@
     <Compile Include="Character\Stones\TowerStone.cs" />
     <Compile Include="Character\Stones\WarriorStone.cs" />
     <Compile Include="Character\Storage.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Forms\ChoosePassiveEffectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChoosePassiveEffectForm.Designer.cs">
+      <DependentUpon>ChoosePassiveEffectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ChooseRaceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +173,9 @@
     <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ChoosePassiveEffectForm.resx">
+      <DependentUpon>ChoosePassiveEffectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChooseRaceForm.resx">
       <DependentUpon>ChooseRaceForm.cs</DependentUpon>
     </EmbeddedResource>

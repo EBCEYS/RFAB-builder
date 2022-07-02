@@ -1,0 +1,6 @@
+TODO list RFABulder-desktop:
+AurielEffect
+KinaretEffect
+DibellaEffect
+Сангвин - не доделано
+Периайт - не доделано

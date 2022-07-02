@@ -27,8 +27,16 @@ namespace RFAB_builder.Forms
         public void UpdateElements()
         {
             RaceLabel.Text = "Раса: " + YourChar.Race.Name;
+            RaceLabel.Update();
             NameLabel.Text = "Имя: " + YourChar.Name;
-            StoneLabel.Text = "Камень: " + YourChar.Stone?.Name ?? "камень не выбран";
+            NameLabel.Update();
+            StoneLabel.Text = "Камень: " + (!string.IsNullOrEmpty(YourChar.Stone?.Name)? YourChar.Stone?.Name : "камень не выбран");
+            StoneLabel.Update();
+            if (YourChar.Effects != null)
+            {
+                PassiveEffectsDataGridView.DataSource = YourChar.Effects.ToArray();
+                PassiveEffectsDataGridView.Update();
+            }
         }
 
         private void CreateCharacterForm_Load(object sender, EventArgs e)
@@ -53,6 +61,48 @@ namespace RFAB_builder.Forms
         {
             ChooseStoneForm chooseStoneForm = new ChooseStoneForm(this);
             chooseStoneForm.Show();
+        }
+
+        private void ОсновнойСюжетToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChoosePassiveEffectForm choosePassiveEffectForm = new ChoosePassiveEffectForm(Storage.MainQuestEffects, this);
+            choosePassiveEffectForm.Show();
+        }
+
+        private void ГильдииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChoosePassiveEffectForm choosePassiveEffectForm = new ChoosePassiveEffectForm(Storage.GuildsEffects, this);
+            choosePassiveEffectForm.Show();
+        }
+
+        private void ГражданскаяВойнаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChoosePassiveEffectForm choosePassiveEffectForm = new ChoosePassiveEffectForm(Storage.CivilWarEffects, this);
+            choosePassiveEffectForm.Show();
+        }
+
+        private void ЧудоПриродыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChoosePassiveEffectForm choosePassiveEffectForm = new ChoosePassiveEffectForm(Storage.BlessingOfNatureEffects, this);
+            choosePassiveEffectForm.Show();
+        }
+
+        private void ЧерныеКнигиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChoosePassiveEffectForm choosePassiveEffectForm = new ChoosePassiveEffectForm(Storage.BlackBooksEffects, this);
+            choosePassiveEffectForm.Show();
+        }
+
+        private void KамниВсесоздателяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChoosePassiveEffectForm choosePassiveEffectForm = new ChoosePassiveEffectForm(Storage.AllMakerStonesEffects, this);
+            choosePassiveEffectForm.Show();
+        }
+
+        private void PазноеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChoosePassiveEffectForm choosePassiveEffectForm = new ChoosePassiveEffectForm(Storage.AnotherEffects, this);
+            choosePassiveEffectForm.Show();
         }
     }
 }

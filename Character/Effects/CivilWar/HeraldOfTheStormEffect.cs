@@ -11,9 +11,9 @@ namespace RFAB_builder.Character.Effects
     {
         public string Name { get; set; } = "Вестник бури.";
         public string Description { get; set; } = "10% физического урона по имперцам. 10% физического урона по эльфам[по всем]. 50 брони. 5% сопротивления холоду.";
-        public PassiveEffectType Type { get; set; }
-        public int? PowerLevel { get; set; }
-        public Color Color { get; set; }
+        public PassiveEffectType Type { get; set; } = PassiveEffectType.CivilWar;
+        public int? PowerLevel { get; set; } = 1;
+        public Color Color { get; set; } = Color.Purple;
 
         public void Effect()
         {

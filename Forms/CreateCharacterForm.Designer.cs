@@ -30,20 +30,33 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.выборРасыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выборКамняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пассивныеЭффектыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.основнойСюжетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.гильдииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.гражданскаяВойнаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.чудоПриродыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.черныеКнигиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.камниВсесоздателяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.разноеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RaceLabel = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.StoneLabel = new System.Windows.Forms.Label();
-            this.выборКамняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.PassiveEffectsDataGridView = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PassiveEffectsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.выборРасыToolStripMenuItem,
-            this.выборКамняToolStripMenuItem});
+            this.выборКамняToolStripMenuItem,
+            this.пассивныеЭффектыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1184, 24);
@@ -56,6 +69,76 @@
             this.выборРасыToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.выборРасыToolStripMenuItem.Text = "Выбор расы";
             this.выборРасыToolStripMenuItem.Click += new System.EventHandler(this.ВыборРасыToolStripMenuItem_Click);
+            // 
+            // выборКамняToolStripMenuItem
+            // 
+            this.выборКамняToolStripMenuItem.Name = "выборКамняToolStripMenuItem";
+            this.выборКамняToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.выборКамняToolStripMenuItem.Text = "Выбор камня";
+            this.выборКамняToolStripMenuItem.Click += new System.EventHandler(this.ВыборКамняToolStripMenuItem_Click);
+            // 
+            // пассивныеЭффектыToolStripMenuItem
+            // 
+            this.пассивныеЭффектыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.основнойСюжетToolStripMenuItem,
+            this.гильдииToolStripMenuItem,
+            this.гражданскаяВойнаToolStripMenuItem,
+            this.чудоПриродыToolStripMenuItem,
+            this.черныеКнигиToolStripMenuItem,
+            this.камниВсесоздателяToolStripMenuItem,
+            this.разноеToolStripMenuItem});
+            this.пассивныеЭффектыToolStripMenuItem.Name = "пассивныеЭффектыToolStripMenuItem";
+            this.пассивныеЭффектыToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
+            this.пассивныеЭффектыToolStripMenuItem.Text = "Пассивные эффекты";
+            // 
+            // основнойСюжетToolStripMenuItem
+            // 
+            this.основнойСюжетToolStripMenuItem.Name = "основнойСюжетToolStripMenuItem";
+            this.основнойСюжетToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.основнойСюжетToolStripMenuItem.Text = "Основной сюжет";
+            this.основнойСюжетToolStripMenuItem.Click += new System.EventHandler(this.ОсновнойСюжетToolStripMenuItem_Click);
+            // 
+            // гильдииToolStripMenuItem
+            // 
+            this.гильдииToolStripMenuItem.Name = "гильдииToolStripMenuItem";
+            this.гильдииToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.гильдииToolStripMenuItem.Text = "Гильдии";
+            this.гильдииToolStripMenuItem.Click += new System.EventHandler(this.ГильдииToolStripMenuItem_Click);
+            // 
+            // гражданскаяВойнаToolStripMenuItem
+            // 
+            this.гражданскаяВойнаToolStripMenuItem.Name = "гражданскаяВойнаToolStripMenuItem";
+            this.гражданскаяВойнаToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.гражданскаяВойнаToolStripMenuItem.Text = "Гражданская война";
+            this.гражданскаяВойнаToolStripMenuItem.Click += new System.EventHandler(this.ГражданскаяВойнаToolStripMenuItem_Click);
+            // 
+            // чудоПриродыToolStripMenuItem
+            // 
+            this.чудоПриродыToolStripMenuItem.Name = "чудоПриродыToolStripMenuItem";
+            this.чудоПриродыToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.чудоПриродыToolStripMenuItem.Text = "Чудо природы";
+            this.чудоПриродыToolStripMenuItem.Click += new System.EventHandler(this.ЧудоПриродыToolStripMenuItem_Click);
+            // 
+            // черныеКнигиToolStripMenuItem
+            // 
+            this.черныеКнигиToolStripMenuItem.Name = "черныеКнигиToolStripMenuItem";
+            this.черныеКнигиToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.черныеКнигиToolStripMenuItem.Text = "Черные книги";
+            this.черныеКнигиToolStripMenuItem.Click += new System.EventHandler(this.ЧерныеКнигиToolStripMenuItem_Click);
+            // 
+            // камниВсесоздателяToolStripMenuItem
+            // 
+            this.камниВсесоздателяToolStripMenuItem.Name = "камниВсесоздателяToolStripMenuItem";
+            this.камниВсесоздателяToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.камниВсесоздателяToolStripMenuItem.Text = "Камни Всесоздателя";
+            this.камниВсесоздателяToolStripMenuItem.Click += new System.EventHandler(this.KамниВсесоздателяToolStripMenuItem_Click);
+            // 
+            // разноеToolStripMenuItem
+            // 
+            this.разноеToolStripMenuItem.Name = "разноеToolStripMenuItem";
+            this.разноеToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.разноеToolStripMenuItem.Text = "Разное";
+            this.разноеToolStripMenuItem.Click += new System.EventHandler(this.PазноеToolStripMenuItem_Click);
             // 
             // RaceLabel
             // 
@@ -99,18 +182,33 @@
             this.StoneLabel.TabIndex = 3;
             this.StoneLabel.Text = "Камень:";
             // 
-            // выборКамняToolStripMenuItem
+            // groupBox2
             // 
-            this.выборКамняToolStripMenuItem.Name = "выборКамняToolStripMenuItem";
-            this.выборКамняToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
-            this.выборКамняToolStripMenuItem.Text = "Выбор камня";
-            this.выборКамняToolStripMenuItem.Click += new System.EventHandler(this.ВыборКамняToolStripMenuItem_Click);
+            this.groupBox2.Controls.Add(this.PassiveEffectsDataGridView);
+            this.groupBox2.Location = new System.Drawing.Point(389, 27);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(783, 337);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Список пассивных эффектов:";
+            // 
+            // PassiveEffectsDataGridView
+            // 
+            this.PassiveEffectsDataGridView.AllowUserToAddRows = false;
+            this.PassiveEffectsDataGridView.AllowUserToDeleteRows = false;
+            this.PassiveEffectsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.PassiveEffectsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PassiveEffectsDataGridView.Location = new System.Drawing.Point(7, 20);
+            this.PassiveEffectsDataGridView.Name = "PassiveEffectsDataGridView";
+            this.PassiveEffectsDataGridView.Size = new System.Drawing.Size(770, 311);
+            this.PassiveEffectsDataGridView.TabIndex = 0;
             // 
             // CreateCharacterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -122,6 +220,8 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PassiveEffectsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +236,15 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label StoneLabel;
         private System.Windows.Forms.ToolStripMenuItem выборКамняToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem пассивныеЭффектыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem основнойСюжетToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem гильдииToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem гражданскаяВойнаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem чудоПриродыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem черныеКнигиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem камниВсесоздателяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem разноеToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView PassiveEffectsDataGridView;
     }
 }
