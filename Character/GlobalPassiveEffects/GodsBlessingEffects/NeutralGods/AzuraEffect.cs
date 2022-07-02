@@ -9,7 +9,7 @@ namespace RFAB_builder.Character.Effects
 {
     public class AzuraEffect : IBasePassiveEffect
     {
-        public string Name { get; set; } = "Азуры";
+        public string Name { get; set; } = "Азура";
         public string Description { get; set; } = "5/10% сопротивления магии. 25/50 ХП|МП. 10/20% сопротивления холоду и огню.";
         public PassiveEffectType Type { get; set; } = PassiveEffectType.GodBlessing;
         public int? PowerLevel { get; set; } = 1;

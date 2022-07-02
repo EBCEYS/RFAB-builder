@@ -22,19 +22,19 @@ namespace RFAB_builder.Character.Effects
 
         public void Effect(Characters character)
         {
-            if (character.BodyArmour.ItemType == ItemType.dvemerik)
+            if (character.BodyArmour?.ItemType == ItemType.DvemerikArmor)
             {
                 character.BodyArmour.ClassMultiplier += 0.1;
             }
-            if (character.Head.ItemType == ItemType.dvemerik)
+            if (character.Head?.ItemType == ItemType.DvemerikArmor)
             {
                 character.Head.ClassMultiplier += 0.1;
             }
-            if (character.Gloves.ItemType == ItemType.dvemerik)
+            if (character.Gloves?.ItemType == ItemType.DvemerikArmor)
             {
                 character.Gloves.ClassMultiplier += 0.1;
             }
-            if (character.Boots.ItemType == ItemType.dvemerik)
+            if (character.Boots?.ItemType == ItemType.DvemerikArmor)
             {
                 character.Boots.ClassMultiplier += 0.1;
             }

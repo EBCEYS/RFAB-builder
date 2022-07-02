@@ -57,19 +57,13 @@ namespace RFAB_builder.Character
             , new AlikhrsDisciplineEffect(), new ArenaLegendEffect(), new EsbernPotionEffect(), new DebellaChosenEffect()
             , new MaraChosenEffect()
         };
-        public static List<IBasePassiveEffect> GoodGodsEffects { get; set; } = new List<IBasePassiveEffect>()
+        public static List<IBasePassiveEffect> GodsEffects { get; set; } = new List<IBasePassiveEffect>()
         {
             new AkatowEffect(), new ZenitarEffect(), new DjulianosEffect(), new DibellaEffect()
             , new KinaretEffect(), new MaraEffect(), new ArkeyEffect(), new StendarEffect()
             , new TalosEffect(), new AurielEffect()
-        };
-        public static List<IBasePassiveEffect> BadGodsEffects { get; set; } = new List<IBasePassiveEffect>()
-        {
-            new BoetiaEffect(), new NokturnalEffect(), new MefalaEffect()
-        };
-        public static List<IBasePassiveEffect> NeutralGodsEffects { get; set; } = new List<IBasePassiveEffect>()
-        {
-            new PeriaitEffect(), new SangvinEffect(), new MalakatEffect(), new AzuraEffect()
+            , new BoetiaEffect(), new NokturnalEffect(), new MefalaEffect()
+            , new PeriaitEffect(), new SangvinEffect(), new MalakatEffect(), new AzuraEffect()
         };
     }
 }

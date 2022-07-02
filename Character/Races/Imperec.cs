@@ -14,8 +14,8 @@ namespace RFAB_builder.Character.Races
         public long BaseMP { get; set; } = 100;
         public long BaseST { get; set; } = 110;
         public double BaseHPRegen { get; set; } = 0.0;
-        public double BaseMPRegen { get; set; } = 0.011;
-        public double BaseSTRegen { get; set; } = 0.019;
+        public double BaseMPRegen { get; set; } = 1.1;
+        public double BaseSTRegen { get; set; } = 1.9;
         public long BaseUnarmedDamage { get; set; } = 8;
         public long BaseWeight { get; set; } = 120;
         public RacesTypes RaceType { get; set; } = RacesTypes.Imperec;
@@ -30,9 +30,9 @@ namespace RFAB_builder.Character.Races
             character.WhiteHP += BaseHP;
             character.WhiteMana += BaseMP;
             character.WhiteStamina += BaseST + 50;
-            character.HPRegenPercents += BaseHPRegen;
-            character.MPRegenPercents += BaseMPRegen;
-            character.STRegenPercents += BaseSTRegen;
+            character.HPRegenMultiplyer += BaseHPRegen;
+            character.MPRegenMultiplyer += BaseMPRegen;
+            character.STRegenMultiplyer += BaseSTRegen;
             character.UnarmedDamage += BaseUnarmedDamage;
             character.Weight += BaseWeight;
 

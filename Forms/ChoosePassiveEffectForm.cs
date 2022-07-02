@@ -39,9 +39,6 @@ namespace RFAB_builder.Forms
                 case PassiveEffectType.AllMakerStone:
                     AddOne();
                     break;
-                case PassiveEffectType.Another:
-                    AddOne();
-                    break;
                 default:
                     AddMany();
                     break;
@@ -70,9 +67,6 @@ namespace RFAB_builder.Forms
                             break;
                         case PassiveEffectType.AllMakerStone:
                             _ccForm.YourChar.Effects.AddOverwriteSearchByType(chosenEffect);
-                            break;
-                        case PassiveEffectType.Another:
-                            _ccForm.YourChar.Effects.AddOverwriteSearchByName(chosenEffect);
                             break;
                         default:
                             throw new Exception("Нельзя добавить данный эффект, так как необходимо добавление группой!" + effectsType);

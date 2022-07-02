@@ -22,7 +22,7 @@ namespace RFAB_builder.Character.Effects
 
         public void Effect(Characters character)
         {
-            character.PhysicalDamageReduction -= 0.1;
+            character.PhysicalResistanceOverCup -= 0.1;
             character.WeaponDamageMultiplier += 0.2;
         }
     }

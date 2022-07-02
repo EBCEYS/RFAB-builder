@@ -13,9 +13,9 @@ namespace RFAB_builder.Character.Races
         public long BaseHP { get; set; } = 110;
         public long BaseMP { get; set; } = 90;
         public long BaseST { get; set; } = 120;
-        public double BaseHPRegen { get; set; } = 0.0;
-        public double BaseMPRegen { get; set; } = 0.011;
-        public double BaseSTRegen { get; set; } = 0.016;
+        public double BaseHPRegen { get; set; } = 1.0;
+        public double BaseMPRegen { get; set; } = 1.1;
+        public double BaseSTRegen { get; set; } = 1.6;
         public long BaseUnarmedDamage { get; set; } = 10;
         public long BaseWeight { get; set; } = 120;
         public RacesTypes RaceType { get; set; } = RacesTypes.Argonianin;
@@ -30,15 +30,12 @@ namespace RFAB_builder.Character.Races
             character.WhiteHP += BaseHP;
             character.WhiteMana += BaseMP;
             character.WhiteStamina += BaseST;
-            character.HPRegenPercents += BaseHPRegen;
-            character.MPRegenPercents += BaseMPRegen;
-            character.STRegenPercents += BaseSTRegen;
             character.UnarmedDamage += BaseUnarmedDamage;
             character.Weight += BaseWeight;
 
-            character.HPRegenMultiplyer += 1.5;
-            character.HPRegenPercents += 1.0;
-            character.STRegenPercents += 0.5;
+            character.HPRegenMultiplyer += BaseHPRegen;
+            character.MPRegenMultiplyer += BaseMPRegen;
+            character.STRegenMultiplyer += BaseSTRegen;
             character.PoisonResistance += 0.75;
             character.IllResistance += 0.75;
 

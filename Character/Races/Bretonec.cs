@@ -14,8 +14,8 @@ namespace RFAB_builder.Character.Races
         public long BaseMP { get; set; } = 120;
         public long BaseST { get; set; } = 90;
         public double BaseHPRegen { get; set; } = 0.0;
-        public double BaseMPRegen { get; set; } = 0.017;
-        public double BaseSTRegen { get; set; } = 0.015;
+        public double BaseMPRegen { get; set; } = 1.7;
+        public double BaseSTRegen { get; set; } = 1.5;
         public long BaseUnarmedDamage { get; set; } = 7;
         public long BaseWeight { get; set; } = 100;
         public RacesTypes RaceType { get; set; } = RacesTypes.Bretonec;
@@ -30,9 +30,9 @@ namespace RFAB_builder.Character.Races
             character.WhiteHP += BaseHP;
             character.WhiteMana += BaseMP;
             character.WhiteStamina += BaseST;
-            character.HPRegenPercents += BaseHPRegen;
-            character.MPRegenPercents += BaseMPRegen;
-            character.STRegenPercents += BaseSTRegen;
+            character.HPRegenMultiplyer += BaseHPRegen;
+            character.MPRegenMultiplyer += BaseMPRegen;
+            character.STRegenMultiplyer += BaseSTRegen;
             character.UnarmedDamage += BaseUnarmedDamage;
             character.Weight += BaseWeight;
 

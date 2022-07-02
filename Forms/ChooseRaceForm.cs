@@ -38,7 +38,18 @@ namespace RFAB_builder.Forms
                 string name = !string.IsNullOrEmpty(textBox1.Text) ? textBox1.Text : throw new Exception($"Не введено имя персонажа!{Environment.NewLine}Введите имя персонажа");
                 if (choosenRace != null)
                 {
-                    CcForm.YourChar = new Characters(choosenRace, name);
+                    if (CcForm.YourChar == null)
+                    {
+                        CcForm.YourChar = new Characters(choosenRace, name);
+                    }
+                    else
+                    {
+                        CcForm.YourChar.Race = choosenRace;
+                        if (!string.IsNullOrEmpty(name))
+                        {
+                            CcForm.YourChar.Name = name;
+                        }
+                    }
                     Logger.Info($"Created character: {CcForm.YourChar.Name} with race {CcForm.YourChar.Race.Name}");
                     CcForm.UpdateElements();
                     this.Close();

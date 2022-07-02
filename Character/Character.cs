@@ -23,8 +23,14 @@ namespace RFAB_builder.Character
         public double STRegenPercents { get; set; } = 0.0;
         public double HPRegenDigit { get; set; } = 0.0;
         public double HPRegenMultiplyer { get; set; } = 0.0;
+        public double MPRegenMultiplyer { get; set; } = 0.0;
+        public double STRegenMultiplyer { get; set; } = 0.0;
         public double MPRegenDigit { get; set; } = 0.0;
         public double STRegenDigit { get; set; } = 0.0;
+
+        public double HPRegenFact { get; set; } = 0.0;
+        public double MPRegenFact { get; set; } = 0.0;
+        public double STRegenFact { get; set; } = 0.0;
 
         public double Trade { get; set; } = 0.0;
         public double Weight { get; set; } = 0.0;
@@ -94,6 +100,7 @@ namespace RFAB_builder.Character
         public double UndeadResistance { get; set; } = 0.0;
         public double ChanceToAbsorbSpell { get; set; } = 0.0;
 
+        public double PhysicalResistanceOverCup { get; set; } = 0.0;
         public double ElemResistanceOverCup { get; set; } = 0.0;
 
         public double Stability { get; set; } = 0.0;
@@ -186,6 +193,14 @@ namespace RFAB_builder.Character
             UnarmedDamage = Race.BaseUnarmedDamage;
             WeaponDamageMultiplier = 0.0;
 
+            HPRegenMultiplyer = 0.0;
+            MPRegenMultiplyer = 0.0;
+            STRegenMultiplyer = 0.0;
+
+            HPRegenFact = 0.0;
+            STRegenFact = 0.0;
+            MPRegenFact = 0.0;
+
             MaxPerksCount = Level + 3;
 
             MagePower = 0.0;
@@ -235,6 +250,7 @@ namespace RFAB_builder.Character
             ShoutsDamageReduction = 0.0;
             ElemResistanceOverCup = 0.0;
             AdditionalSummonMinionsHealth = 0;
+            PhysicalResistanceOverCup = 0.0;
 
             Stability = 0.0;
             FallDamage = 1.0;
@@ -281,10 +297,31 @@ namespace RFAB_builder.Character
 
         public Characters(IBaseRace race, string name)
         {
-            Logger.Info($"Set character with name: {name} with race:");
+            Logger.Info($"Create character with name: {name} with race:");
             Logger.Info(race);
             this.Race = race;
             this.Name = name;
+        }
+
+        private void CalcStats()
+        {
+            //TODO: узнать как считается все это говно
+            double isArgonianinHPRegenMultiplier = (Race.RaceType == RacesTypes.Argonianin ? 1.5 : 0);
+            double hpSum = Convert.ToDouble(WhiteHP + BlueHP) / 100.0;
+            HPRegenFact = Math.Round(
+                ((hpSum * HPRegenPercents * 0.2)
+                + HPRegenDigit + (hpSum * HPRegenMultiplyer)) * isArgonianinHPRegenMultiplier
+                , 1, MidpointRounding.AwayFromZero);
+
+            double mpSum = Convert.ToDouble(WhiteMana + BlueMana) / 100;
+            MPRegenFact = Math.Round((mpSum * MPRegenPercents * 0.2)
+                + MPRegenDigit + (mpSum * MPRegenMultiplyer)
+                , 1, MidpointRounding.AwayFromZero);
+
+            double stSum = Convert.ToDouble(WhiteStamina + BlueStamina) / 100;
+            STRegenFact = Math.Round((stSum * STRegenPercents * 0.2)
+                + STRegenDigit + (stSum * STRegenMultiplyer)
+                , 1, MidpointRounding.AwayFromZero);
         }
 
         public void Effect()
@@ -304,7 +341,11 @@ namespace RFAB_builder.Character
             {
                 effect.Effect(this);
             }
-            Stone.Effect(this);
+            if (Stone != null)
+            {
+                Stone.Effect(this);
+            }
+            CalcStats();
         }
     }
 }

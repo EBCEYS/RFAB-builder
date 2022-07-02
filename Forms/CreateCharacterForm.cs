@@ -26,16 +26,35 @@ namespace RFAB_builder.Forms
 
         public void UpdateElements()
         {
+            YourChar.Effect();
             RaceLabel.Text = "Раса: " + YourChar.Race.Name;
             RaceLabel.Update();
             NameLabel.Text = "Имя: " + YourChar.Name;
             NameLabel.Update();
             StoneLabel.Text = "Камень: " + (!string.IsNullOrEmpty(YourChar.Stone?.Name)? YourChar.Stone?.Name : "камень не выбран");
             StoneLabel.Update();
+            GodLabel.Text = "Бог: " + YourChar.God?.Name ?? "бог не выбран";
+            GodLabel.Update();
+            HPLabel.Text = $"ХП: {YourChar.WhiteHP} + ({YourChar.BlueHP}) = {YourChar.WhiteHP + YourChar.BlueHP}";
+            HPLabel.Update();
+            MPLabel.Text = $"МП: {YourChar.WhiteMana} + ({YourChar.BlueMana}) = {YourChar.WhiteMana + YourChar.BlueMana}";
+            MPLabel.Update();
+            STLabel.Text = $"СТ: {YourChar.WhiteStamina} + ({YourChar.BlueStamina}) = {YourChar.WhiteStamina + YourChar.BlueStamina}";
+            STLabel.Update();
+
+            HPRegenLabel.Text = $"ХП реген: {YourChar.HPRegenFact}";
+            MPRegenLabel.Text = $"МП реген: {YourChar.MPRegenFact}";
+            STRegenLabel.Text = $"СТ реген: {YourChar.STRegenFact}";
+
             if (YourChar.Effects != null)
             {
                 PassiveEffectsDataGridView.DataSource = YourChar.Effects.ToArray();
                 PassiveEffectsDataGridView.Update();
+            }
+            if (YourChar.Inventory != null)
+            {
+                EquipmentDataGridView.DataSource = YourChar.Inventory.Select(x => (x.Slot, x.Name));
+                EquipmentDataGridView.Update();
             }
         }
 
@@ -43,6 +62,8 @@ namespace RFAB_builder.Forms
         {
             Logger.Info("Show create character form");
             Text = "Меню выбора персонажа";
+            BackgroundImage = Properties.Resources.MainMenuBackgroundImage;
+            BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void CreateCharacterForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -102,6 +123,12 @@ namespace RFAB_builder.Forms
         private void PазноеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChoosePassiveEffectForm choosePassiveEffectForm = new ChoosePassiveEffectForm(Storage.AnotherEffects, this);
+            choosePassiveEffectForm.Show();
+        }
+
+        private void БогToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChoosePassiveEffectForm choosePassiveEffectForm = new ChoosePassiveEffectForm(Storage.GodsEffects, this);
             choosePassiveEffectForm.Show();
         }
     }

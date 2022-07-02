@@ -20,8 +20,8 @@ namespace RFAB_builder.Character.Stones
         {
             character.BlueHP += 50;
             character.HPRangTwo = true;
-            character.HPRegenPercents += 1.0;
-            character.PhysicalDamageReduction += 0.1;
+            character.HPRegenMultiplyer += 1.0;
+            character.PhysicalResistanceOverCup += 0.1;
         }
     }
 }

@@ -22,7 +22,8 @@ namespace RFAB_builder.Character.Effects
 
         public void Effect(Characters character)
         {
-            character.PhysicalDamageReduction += 0.03;
+            character.PhysicalResistanceOverCup += 0.03;
+            character.ElemResistanceOverCup += 0.03;
             character.PoisonResistance += 0.1;
         }
     }
